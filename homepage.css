@@ -161,46 +161,6 @@ body{
     margin-top: 80px;
 }
 
-
-/*
-!*Texto*!
-#divtexto{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 100px;
-}
-#textoisa{
-    font-size: 15pt;
-    display: inline-block;
-}
-
-#textoisa::selection{
-    background-color: #0085C0;
-}
-#imagemisa{
-    width: 370px;
-    height: auto;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 3s;
-}
-!*Scrollbar*!
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #0085C0;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #F8EFFF;
-}*/
 :focus {
     outline: 5px solid #588A6B;
 }
@@ -261,29 +221,4 @@ body{
         width: 167px;
         height: 163.450px;
     }
-
-
-
-
-    /*.contactos{
-        font-size: 15pt;
-    }
-    #tituloisa, #tituloroxo{
-        font-size: 80pt;
-    }
-    #textoisa{
-        font-size: 11pt;
-    }
-    #imagemisa{
-        width:250px;
-    }
-    #cursor{
-        display: none;
-    }
-    #scroll{
-        display: none;
-    }
-    .containerhomepage {
-        margin: 22px 25px;
-    }*/
 }

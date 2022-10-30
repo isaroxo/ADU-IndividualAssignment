@@ -111,17 +111,6 @@ function mudaPaginaParaCard() {
     window.location.assign("Card.html")
 }
 
-var divtitulo = document.getElementById("divtitulo");
-var tituloisa = document.getElementById("tituloisa");
-var tituloroxo = document.getElementById("tituloroxo");
-var email = document.getElementById("email");
-var behance = document.getElementById("linkbehance");
-var textoisa = document.getElementById("textoisa");
-var imagemisa = document.getElementById("imagemisa");
-var textocopiar = document.getElementById("textocopiar");
-var inputemail = document.getElementById("inputemail");
-
-
 
 if (window.matchMedia("(min-width: 992px)").matches) {
     botaoinicial.innerHTML = "Press “space” to see instructions";
@@ -143,8 +132,6 @@ if (window.matchMedia("(min-width: 992px)").matches) {
         botaoinicial.addEventListener("click", mudaPaginaParaMenu, false);
     }
 }
-
-
 
 
 //FUNÇÃO QUE VÊ SE A WIDTH DA JANELA MUDOU
@@ -178,139 +165,3 @@ if (window.matchMedia("(max-width: 992px)").matches) {
         botaoinicial.addEventListener("click", mudaPaginaParaMenu, false);
     }
 }
-
-//FUNÇÃO APARECE FOTO NO TELEMOVEL
-function scrollImagem() {
-    if (isInViewport(textoisa)) {
-        imagemisa.style.opacity = "1";
-    }
-    /*console.log("if para telemovel");*/
-}
-
-//FUNÇÃO APARECE INSTRUÇÃO COPIAR NO TELEMOVEL
-function textoCopiado() {
-    inputemail.select();
-    navigator.clipboard.writeText(inputemail.value);
-    textocopiar.innerHTML = "Copiado!";
-}
-
-// MUDANÇA DAS CORES AO PRESSIONAR O RATO
-tituloisa.addEventListener("mousedown", mudarFundoOver, false);
-tituloroxo.addEventListener("mousedown", mudarFundoOver, false);
-
-tituloisa.addEventListener("mouseup", mudarFundoUp, false);
-tituloroxo.addEventListener("mouseup", mudarFundoUp, false);
-/*console.log("não muda de cor");*/
-
-//FOTO APARECE QUANDO SE FAZ HOVER NO TEXTO
-textoisa.addEventListener("mouseover", function () {
-    imagemisa.style.opacity = "1";
-}, false);
-
-textoisa.addEventListener("mouseout", function () {
-    imagemisa.style.opacity = "0";
-}, false);
-/*console.log("if para pc");*/
-
-//INSTRUÇÕES QUE APARECEM AO CLICAR NO EMAIL
-email.addEventListener("click", function () {
-    inputemail.select();
-    navigator.clipboard.writeText(inputemail.value);
-    textocopiar.innerHTML = "Copiado!";
-});
-//INSTRUÇÕES QUE APARECEM AO FAZER HOVER NO EMAIL
-email.addEventListener("mouseover", function () {
-    textocopiar.innerHTML = "Copiar email";
-});
-
-
-//FUNÇÃO MUDA AS CORES AO PRESSIONAR O RATO NO COMPUTADOR
-function mudarFundoOver() {
-    document.body.style.backgroundColor = "#EDD7FF";
-    tituloisa.style.textShadow = "-1.2px -1.2px 0 #a758e9, 1.2px -1.2px 0 #a758e9, -1.2px 1.2px 0 #a758e9, 1.2px 1.2px 0 #a758e9";
-    tituloisa.style.color = "#EDD7FF";
-    tituloroxo.style.textShadow = "0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7";
-    tituloroxo.style.color = "#B678E7";
-    email.style.color = "#B678E7";
-    behance.style.color = "#B678E7";
-    textoisa.style.color = "#B678E7";
-}
-
-//FUNÇÃO MUDA AS CORES AO DEIXAR DE PRESSIONAR O RATO NO COMPUTADOR
-function mudarFundoUp() {
-    document.body.style.backgroundColor = "#B678E7";
-    tituloroxo.style.textShadow = "-1.2px -1.2px 0 #a758e9, 1.2px -1.2px 0 #a758e9, -1.2px 1.2px 0 #a758e9, 1.2px 1.2px 0 #a758e9";
-    tituloroxo.style.color = "#B678E7";
-    tituloisa.style.textShadow = "0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7";
-    tituloisa.style.color = "white";
-    email.style.color = "white";
-    behance.style.color = "white";
-    textoisa.style.color = "white";
-}
-
-//FUNÇÃO MUDA AS CORES AO CLICAR COM O RATO NO TELEMOVEL
-function mudarFundoOverTelemovel() {
-    document.body.style.backgroundColor = "#EDD7FF";
-    tituloisa.style.textShadow = "-1.2px -1.2px 0 #a758e9, 1.2px -1.2px 0 #a758e9, -1.2px 1.2px 0 #a758e9, 1.2px 1.2px 0 #a758e9";
-    tituloisa.style.color = "#EDD7FF";
-    tituloroxo.style.textShadow = "0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7";
-    tituloroxo.style.color = "#B678E7";
-    email.style.color = "#B678E7";
-    behance.style.color = "#B678E7";
-    textoisa.style.color = "#B678E7";
-    this.removeEventListener("click", mudarFundoOverTelemovel);
-    tituloisa.addEventListener("click", mudarFundoUpTelemovel, false);
-    tituloroxo.addEventListener("click", mudarFundoUpTelemovel, false);
-}
-
-//FUNÇÃO MUDA AS CORES AO CLICAR OUTRA VEZ COM O RATO NO TELEMOVEL
-function mudarFundoUpTelemovel() {
-    document.body.style.backgroundColor = "#B678E7";
-    tituloroxo.style.textShadow = "-1.2px -1.2px 0 #a758e9, 1.2px -1.2px 0 #a758e9, -1.2px 1.2px 0 #a758e9, 1.2px 1.2px 0 #a758e9";
-    tituloroxo.style.color = "#B678E7";
-    tituloisa.style.textShadow = "0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7, 0 0 0 #B678E7";
-    tituloisa.style.color = "white";
-    email.style.color = "white";
-    behance.style.color = "white";
-    textoisa.style.color = "white";
-    this.removeEventListener("click", mudarFundoUpTelemovel);
-    tituloisa.addEventListener("click", mudarFundoOverTelemovel, false);
-    tituloroxo.addEventListener("click", mudarFundoOverTelemovel, false);
-}
-
-//MUDA A COR DO EMAIL AO FAZER HOVER POR CIMA DELE
-email.addEventListener("mouseover", function () {
-    email.style.color = "#B678E7";
-    email.style.textShadow = "-1px -1px 0 #a758e9, 1px -1px 0 #a758e9, -1px 1px 0 #a758e9, 1px 1px 0 #a758e9";
-    textocopiar.style.visibility = "visible";
-    textocopiar.style.opacity = "1";
-}, false);
-email.addEventListener("mouseout", function () {
-    email.style.color = "white";
-    email.style.textShadow = "0 0 0 #a758e9, 0 0 0 #a758e9, 0 0 0 #a758e9, 0 0 0 #a758e9";
-    textocopiar.style.visibility = "hidden";
-    textocopiar.style.opacity = "0";
-}, false);
-
-//MUDA A COR DO BEHANCE AO FAZER HOVER POR CIMA DELE
-behance.addEventListener("mouseover", function () {
-    behance.style.color = "#B678E7";
-    behance.style.textShadow = "-1px -1px 0 #a758e9, 1px -1px 0 #a758e9, -1px 1px 0 #a758e9, 1px 1px 0 #a758e9";
-}, false);
-behance.addEventListener("mouseout", function () {
-    behance.style.color = "white";
-    behance.style.textShadow = "0 0 0 #a758e9, 0 0 0 #a758e9, 0 0 0 #a758e9, 0 0 0 #a758e9";
-}, false);
-
-//FUNÇÃO QUE FAZ O TEXTO MOVER
-function movertexto() {
-    divtitulo.style.position = "relative";
-    divtitulo.style.bottom = "0px";
-    email.style.position = "relative";
-    email.style.left = "0px";
-    behance.style.position = "relative";
-    behance.style.right = "0px";
-}
-
-window.onload = movertexto();
-
