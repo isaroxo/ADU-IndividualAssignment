@@ -64,6 +64,7 @@ body{
     position: absolute;
     right: 50px;
     height: 90px;
+    border: none;
 }
 .botaosair:active{
     background-color: #B8D5C3;
@@ -252,6 +253,13 @@ body{
         width: 350px;
         text-align: center;
         font-size: 25pt;
+    }
+    :focus {
+        outline: none;
+    }
+    #imageminstrucoes{
+        width: 167px;
+        height: 163.450px;
     }
 
 
