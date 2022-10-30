@@ -75,7 +75,7 @@ body{
 .containerinstrucoes{
     display: flex;
     justify-content: center;
-    height: 53.5vh;
+    height: 55vh;
     margin-top: 80px;
 }
 .tituloinstrucoes{
