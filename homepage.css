@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*html{
+    cursor: none;
+}*/
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #B8D5C3;
+    color: #212121;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 50px;
+}
+#titulo{
+    font-weight: 700;
+    font-size: 60pt;
+    margin-top: 5%;
+}
+#tituloautor{
+    font-weight: 500;
+    font-size: 35pt;
+}
+#divtitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 74vh;
+}
+#divbotao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botao{
+    font-weight: 400;
+    font-size: 17pt;
+    background-color: #B8D5C3;
+    border: 5px solid #212121;
+    height: 80px;
+}
+.botao:active{
+    background-color: #212121;
+    color:#B8D5C3;
+}
+
+
+
+.divtitulopaginas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin: 2% 0;*/
+}
+.titulopagina{
+    font-weight: 700;
+    font-size: 35pt;
+}
+.botaosair{
+    font-weight: 500;
+    font-size: 17pt;
+    background-color: #212121;
+    color: #B8D5C3;
+    position: absolute;
+    right: 50px;
+    height: 90px;
+}
+.botaosair:active{
+    background-color: #B8D5C3;
+    border: 5px solid #212121;
+    color:#212121;
+}
+
+
+.containerinstrucoes{
+    display: flex;
+    justify-content: center;
+    height: 53.5vh;
+    margin-top: 80px;
+}
+.tituloinstrucoes{
+    font-weight: 500;
+    font-size: 17pt;
+}
+.listainstrucoes{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15pt;
+}
+#divnavigate{
+    margin-top: 40px;
+}
+.listainstrucoes>li{
+    margin-bottom: 10px;
+}
+#instrucoes{
+    display: flex;
+    justify-content: space-around;
+}
+#imageminstrucoes{
+    height: fit-content;
+}
+
+
+.subtitulopagina{
+    font-weight: 400;
+    font-size: 17pt;
+}
+.divsubtitulopaginas{
+    display: flex;
+    justify-content: center;
+}
+.botoesmenu{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.containermenu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.botaomenu{
+    font-weight: 400;
+    font-size: 17pt;
+    background-color: #B8D5C3;
+    border: 5px solid #212121;
+    height: 150px;
+    padding: 1% 2%;
+}
+.botaomenu:active{
+    background-color: #212121;
+    color:#B8D5C3;
+}
+
+
+.titulocard {
+    width: 500px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35pt;
+}
+#subtitulocard{
+    font-weight: 500;
+    font-size: 17pt;
+}
+#textocard{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 15pt;
+}
+#textocard>li{
+    margin-bottom: 10px;
+}
+.containercard{
+    display: flex;
+    justify-content: center;
+    height: 49vh;
+    margin-top: 80px;
+}
+
+
+/*
+!*Texto*!
+#divtexto{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#textoisa{
+    font-size: 15pt;
+    display: inline-block;
+}
+
+#textoisa::selection{
+    background-color: #0085C0;
+}
+#imagemisa{
+    width: 370px;
+    height: auto;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 3s;
+}
+!*Scrollbar*!
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0085C0;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #F8EFFF;
+}*/
+:focus {
+    outline: 5px solid #588A6B;
+}
+
+@media screen and (max-width: 992px) {
+    #titulo {
+        font-size: 55pt;
+    }
+    #tituloautor {
+        font-size: 30pt;
+    }
+    .titulopagina {
+        font-size: 30pt;
+    }
+    .botaosair {
+        font-size: 16pt;
+        height: 60px;
+        /*padding: 0 20px;*/
+    }
+    .botao {
+        font-size: 16pt;
+        /*height: 70px;*/
+        padding: 0 40px;
+    }
+    .tituloinstrucoes {
+        font-size: 16pt;
+    }
+    .listainstrucoes {
+        font-size: 14pt;
+    }
+    .subtitulopagina {
+        font-size: 16pt;
+    }
+    .botaomenu {
+        font-size: 16pt;
+        height: 110px;
+    }
+    .botoesmenu {
+        margin-top: 0;
+        width: 100%;
+    }
+    .botoesmenu:first-child {
+        margin-top: 80px;
+    }
+    .botoesmenu>button {
+        margin-bottom: 70px;
+        padding: 0 90px;
+    }
+    .titulocard {
+        width: 350px;
+        text-align: center;
+        font-size: 25pt;
+    }
+
+
+
+
+    /*.contactos{
+        font-size: 15pt;
+    }
+    #tituloisa, #tituloroxo{
+        font-size: 80pt;
+    }
+    #textoisa{
+        font-size: 11pt;
+    }
+    #imagemisa{
+        width:250px;
+    }
+    #cursor{
+        display: none;
+    }
+    #scroll{
+        display: none;
+    }
+    .containerhomepage {
+        margin: 22px 25px;
+    }*/
+}
