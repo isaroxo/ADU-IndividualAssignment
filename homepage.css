@@ -38,6 +38,8 @@ body{
     background-color: #B8D5C3;
     border: 5px solid #212121;
     height: 80px;
+    position: absolute;
+    bottom: 50px;
 }
 .botao:active{
     background-color: #212121;
@@ -76,7 +78,7 @@ body{
 .containerinstrucoes{
     display: flex;
     justify-content: center;
-    height: 55vh;
+    /*height: 55vh;*/
     margin-top: 80px;
 }
 .tituloinstrucoes{
@@ -157,7 +159,7 @@ body{
 .containercard{
     display: flex;
     justify-content: center;
-    height: 49vh;
+    /*height: 49vh;*/
     margin-top: 80px;
 }
 
